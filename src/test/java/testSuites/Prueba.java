@@ -5,11 +5,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import testClasses.BusquedaAnimalesGoogle;
+import testClasses.Logeo;
 
 public class Prueba {
 
     ChromeDriver webDriver;
-    String url = "https://www.google.cl/";
+    String url = "https://www.qanovagroup.com/piloto/";
 
     @BeforeTest
     public void setUp(){
@@ -20,12 +21,18 @@ public class Prueba {
 
     @AfterTest
     public void closeDriver(){
-        webDriver.close();
+
     }
 
     @Test
     public void buscarPerroEnGoogle(){
         BusquedaAnimalesGoogle busquedaAnimalesGoogle = new BusquedaAnimalesGoogle();
         busquedaAnimalesGoogle.busquedaPerro(webDriver);
+    }
+
+    @Test
+    public void pruebaLogin(){
+        Logeo logeo = new Logeo(webDriver);
+        logeo.CasoLogin1("nvivas", "qanova");
     }
 }
