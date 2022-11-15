@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="segundocommit">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="tercercommit(login funcionando)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668516216326</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tercercommit(login funcionando)">
+      <created>1668518335478</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668518335478</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +148,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primercommit" />
     <MESSAGE value="segundocommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="segundocommit" />
+    <MESSAGE value="tercercommit(login funcionando)" />
+    <option name="LAST_COMMIT_MESSAGE" value="tercercommit(login funcionando)" />
   </component>
 </project>
