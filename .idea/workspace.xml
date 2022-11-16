@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="quintocommit(formulario completo funcionando)">
+    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="sextocommit(validacion texto y reportes pdf funcionando)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CargaInformacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CargaInformacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Validaciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Validaciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pruebaLogin - Passed.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668523671804</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="sextocommit(validacion texto y reportes pdf funcionando)">
+      <created>1668601829538</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668601829538</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,7 +209,8 @@
     <MESSAGE value="tercercommit(login funcionando)" />
     <MESSAGE value="cuartocommit(formulario completo funcionando)" />
     <MESSAGE value="quintocommit(formulario completo funcionando)" />
-    <option name="LAST_COMMIT_MESSAGE" value="quintocommit(formulario completo funcionando)" />
+    <MESSAGE value="sextocommit(validacion texto y reportes pdf funcionando)" />
+    <option name="LAST_COMMIT_MESSAGE" value="sextocommit(validacion texto y reportes pdf funcionando)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/segundoproyecto$Prueba.ic" NAME="Prueba Coverage Results" MODIFIED="1668532915649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

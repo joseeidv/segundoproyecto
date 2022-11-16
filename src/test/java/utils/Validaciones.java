@@ -30,7 +30,16 @@ public class Validaciones {
         if (textoWeb.equals(texto)) {
             PdfQaNovaReports.addReport("Comparación texto", "El texto '"+texto+"', se encuentra correctamente en la pagina web", EstadoPrueba.PASSED, false);
         } else {
-            PdfQaNovaReports.addReport("Comparación texto", "El texto '"+texto+"', es distinto al desplegado en la pagina web, el cual es '"+textoWeb+"'", EstadoPrueba.PASSED, false);
+            String letraTexto, letraTextoWeb, diferencia = "";
+            for (int x = 0; x < texto.length(); x++) {
+                letraTexto = texto.substring(x, x+1);
+                letraTextoWeb = textoWeb.substring(x, x+1);
+                if (!letraTexto.equals(letraTextoWeb)) {
+                    System.out.println("Diferencia de textos en el caracter número: "+(x+1)+", en el texto web despliega: '"+letraTextoWeb+"', se esperaba: '"+letraTexto+"' .");
+                    diferencia = diferencia + "-En el caracter "+(x+1)+" en el texto web despliega: '"+letraTextoWeb+"', se esperaba: '"+letraTexto+"'."+ "\n";
+                }
+            }
+            PdfQaNovaReports.addReport("Comparación texto", "El texto '"+texto+"', es distinto al desplegado en la pagina web, el cual es '"+textoWeb+"' \n*Las diferencias son las siguientes: \n"+diferencia, EstadoPrueba.FAILED, false);
         }
     }
 }

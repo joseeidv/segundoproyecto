@@ -10,6 +10,7 @@ import utils.DriverContext;
 import utils.ReadProperties;
 import utils.Reporte.PdfQaNovaReports;
 
+import java.io.IOException;
 import java.text.ParseException;
 
 public class Prueba {
@@ -29,7 +30,7 @@ public class Prueba {
     }
 
     @Test
-    public void pruebaLogin() throws ParseException {
+    public void pruebaLogin() throws ParseException, IOException {
         Logeo logeo = new Logeo();
         String usuario = ReadProperties.readFromConfig("Propiedades.properties").getProperty("usuario");
         String clave = ReadProperties.readFromConfig("Propiedades.properties").getProperty("clave");
