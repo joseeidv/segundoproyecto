@@ -4,8 +4,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import testClasses.BusquedaAnimalesGoogle;
 import testClasses.Logeo;
+import utils.Constants.Navegador;
+import utils.DriverContext;
+import utils.ReadProperties;
+import utils.Reporte.PdfQaNovaReports;
+
+import java.text.ParseException;
 
 public class Prueba {
 
@@ -14,25 +19,21 @@ public class Prueba {
 
     @BeforeTest
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "driverNavegador/chromedriver");
-        webDriver = new ChromeDriver();
-        webDriver.get(url);
+        DriverContext.setUp(Navegador.Chrome, ReadProperties.readFromConfig("Propiedades.properties").getProperty("url"));
+        PdfQaNovaReports.createPDF();
     }
 
     @AfterTest
     public void closeDriver(){
-
+        DriverContext.closeDriver();
     }
 
     @Test
-    public void buscarPerroEnGoogle(){
-        BusquedaAnimalesGoogle busquedaAnimalesGoogle = new BusquedaAnimalesGoogle();
-        busquedaAnimalesGoogle.busquedaPerro(webDriver);
-    }
-
-    @Test
-    public void pruebaLogin(){
-        Logeo logeo = new Logeo(webDriver);
-        logeo.CasoLogin1("nvivas", "qanova");
+    public void pruebaLogin() throws ParseException {
+        Logeo logeo = new Logeo();
+        String usuario = ReadProperties.readFromConfig("Propiedades.properties").getProperty("usuario");
+        String clave = ReadProperties.readFromConfig("Propiedades.properties").getProperty("clave");
+        logeo.CasoLogin1(usuario, clave);
+        PdfQaNovaReports.closePDF();
     }
 }

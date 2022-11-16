@@ -1,11 +1,12 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.DriverContext;
+import utils.Reporte.EstadoPrueba;
+import utils.Reporte.PdfQaNovaReports;
+import utils.Validaciones;
 
 public class Login {
 
@@ -18,15 +19,16 @@ public class Login {
     @FindBy(xpath = "//*[@id=\"imLogin\"]/form/div[3]/input")
     WebElement btnIngresar;
 
-    WebDriverWait webDriverWait;
+    @FindBy(xpath = "//*[@id=\"imLogin\"]/form/div[1]/label/span")
+    WebElement labelUsuario;
 
-    public Login(WebDriver webDriver){
-        PageFactory.initElements(webDriver, this);
-        this.webDriverWait = new WebDriverWait(webDriver, 30);
+    public Login(){
+        PageFactory.initElements(DriverContext.getDriver(),this );
     }
 
     public void ingresarUsuario(String usuario){
-        webDriverWait.until(ExpectedConditions.visibilityOf(inputUsuario));
+        Validaciones.validarObjeto(inputUsuario,"input usuario");
+        PdfQaNovaReports.addWebReportImage("Despliegue Login", "Login desplegado correctamente", EstadoPrueba.PASSED, false);
         inputUsuario.sendKeys(usuario);
     }
 
@@ -35,7 +37,11 @@ public class Login {
     }
 
     public void clickBtnIngresar(){
+        PdfQaNovaReports.addWebReportImage("Datos Login", "Se ingresa usuario y contraseña", EstadoPrueba.PASSED, false);
         btnIngresar.click();
     }
 
+    public void validarTextoUsuario(String texto) {
+        Validaciones.validarTexto(labelUsuario, texto);
+    }
 }

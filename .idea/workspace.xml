@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="cuartocommit(formulario completo funcionando)">
+    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="quintocommit(formulario completo funcionando)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CargaInformacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CargaInformacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSuites/Prueba.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -38,7 +46,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/utils" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.Prueba.pruebaLogin">
+    <configuration name="Prueba" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;testSuites.Prueba&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Prueba.buscarPerroEnGoogle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -88,6 +127,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Prueba.pruebaLogin" />
+        <item itemvalue="Gradle.Prueba" />
         <item itemvalue="Gradle.Prueba.buscarPerroEnGoogle" />
       </list>
     </recent_temporary>
@@ -136,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668522573783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="quintocommit(formulario completo funcionando)">
+      <created>1668523671804</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668523671804</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +202,10 @@
     <MESSAGE value="segundocommit" />
     <MESSAGE value="tercercommit(login funcionando)" />
     <MESSAGE value="cuartocommit(formulario completo funcionando)" />
-    <option name="LAST_COMMIT_MESSAGE" value="cuartocommit(formulario completo funcionando)" />
+    <MESSAGE value="quintocommit(formulario completo funcionando)" />
+    <option name="LAST_COMMIT_MESSAGE" value="quintocommit(formulario completo funcionando)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/segundoproyecto$Prueba.ic" NAME="Prueba Coverage Results" MODIFIED="1668532915649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
