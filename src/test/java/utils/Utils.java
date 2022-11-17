@@ -1,11 +1,22 @@
 package utils;
 
+import org.openqa.selenium.WebElement;
+import utils.Reporte.EstadoPrueba;
+import utils.Reporte.PdfQaNovaReports;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.TextLayout;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.HashMap;
 
 import static utils.Constants.Constants.AMBIENTE;
@@ -56,4 +67,18 @@ public class Utils {
         return out.toByteArray();
     }
 
+    public static void descargarArchivo (WebElement elementoDescarga) throws IOException {
+        String ruta = ReadProperties.readFromConfig("Propiedades.properties").getProperty("directorioDescargas");
+        String url = elementoDescarga.getAttribute("href");
+        String nombreArchivo = url.substring(url.lastIndexOf("/") +1);
+        HttpURLConnection httpURLConnection = (HttpURLConnection) (new URL(url).openConnection());
+        httpURLConnection.setRequestMethod("GET");
+        try (InputStream inputStream = httpURLConnection.getInputStream()) {
+            Files.copy(inputStream, new File(ruta + "//" + nombreArchivo).toPath(), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Descarga Realizada");
+            PdfQaNovaReports.addReport("Descarga Archivo" + nombreArchivo, "Se realiza correctamente la descaga de archivo '"+nombreArchivo+"', el cual se utiliza en: \n" +ruta, EstadoPrueba.PASSED, false);
+        } catch (Exception e) {
+            PdfQaNovaReports.addReport("Descarga Archivo" + nombreArchivo, "No se realiza la descaga de archivo '"+nombreArchivo+"'", EstadoPrueba.FAILED, true);
+        }
+    }
 }
