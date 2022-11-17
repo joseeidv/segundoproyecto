@@ -1,9 +1,8 @@
 package testClasses;
 
-import pages.CargaInformacion;
-import pages.DescargaArchivos;
-import pages.Login;
-import pages.MatrizInformacion;
+import pages.*;
+import utils.Reporte.EstadoPrueba;
+import utils.Reporte.PdfQaNovaReports;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -15,6 +14,8 @@ public class Logeo {
     private MatrizInformacion matrizInformacion;
     private DescargaArchivos descargaArchivos;
 
+    private CargarArchivos cargarArchivos;
+
     public Logeo(){
 
     }
@@ -24,6 +25,7 @@ public class Logeo {
         cargaInformacion = new CargaInformacion();
         matrizInformacion = new MatrizInformacion();
         descargaArchivos = new DescargaArchivos();
+        cargarArchivos = new CargarArchivos();
         login.validarTextoUsuario("Nombre del usuario:");
         login.ingresarUsuario(usuario);
         login.ingresarClave(clave);
@@ -42,9 +44,16 @@ public class Logeo {
         //matrizInformacion.clickBtnFiltrar();
         //matrizInformacion.recuperarDatosFiltrados();
         cargaInformacion.clickBtnEnviar();
-        descargaArchivos.ingresarDescargarArchivos();
+        //descargaArchivos.ingresarDescargarArchivos();
         //descargaArchivos.descargarPorBoton();
         //descargaArchivos.descargarPorLink();
-        descargaArchivos.descargarPorImagen();
+        //descargaArchivos.descargarPorImagen();
+        cargarArchivos.ingresarCargarArchivos();
+        cargarArchivos.validarDespliegue();
+        cargarArchivos.validarTextoTitulo();
+        cargarArchivos.cargarArchivos();
+        cargarArchivos.clickBtnEnviar();
+        matrizInformacion.validarDespliegue();
+        PdfQaNovaReports.addReport("Archivo de Carga", "Archivo cargado correctamente", EstadoPrueba.PASSED,false);
     }
 }

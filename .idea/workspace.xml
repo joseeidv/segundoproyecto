@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="octavocommit(descarga por link y por boton funcionando)">
+    <list default="true" id="944e035d-191d-44c7-81ac-e982ba2d7655" name="Changes" comment="novenocommit(descarga por imagen funcionando)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testClasses/Logeo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Propiedades.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Propiedades.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668693490120</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="novenocommit(descarga por imagen funcionando)">
+      <created>1668695634465</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668695634465</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +231,19 @@
     <MESSAGE value="sextocommit(validacion texto y reportes pdf funcionando)" />
     <MESSAGE value="septimocommit(recuperar datos funcionando)" />
     <MESSAGE value="octavocommit(descarga por link y por boton funcionando)" />
-    <option name="LAST_COMMIT_MESSAGE" value="octavocommit(descarga por link y por boton funcionando)" />
+    <MESSAGE value="novenocommit(descarga por imagen funcionando)" />
+    <option name="LAST_COMMIT_MESSAGE" value="novenocommit(descarga por imagen funcionando)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/CargarArchivos.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/segundoproyecto$Prueba.ic" NAME="Prueba Coverage Results" MODIFIED="1668532915649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
