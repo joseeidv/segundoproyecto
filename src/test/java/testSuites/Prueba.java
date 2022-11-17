@@ -36,5 +36,6 @@ public class Prueba {
         String clave = ReadProperties.readFromConfig("Propiedades.properties").getProperty("clave");
         logeo.CasoLogin1(usuario, clave);
         PdfQaNovaReports.closePDF();
+        //Utils.enviarCorreo("idiaazv@gmail.com");
     }
 }

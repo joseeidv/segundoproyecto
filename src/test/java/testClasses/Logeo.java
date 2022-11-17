@@ -55,5 +55,6 @@ public class Logeo {
         cargarArchivos.clickBtnEnviar();
         matrizInformacion.validarDespliegue();
         PdfQaNovaReports.addReport("Archivo de Carga", "Archivo cargado correctamente", EstadoPrueba.PASSED,false);
+
     }
 }
