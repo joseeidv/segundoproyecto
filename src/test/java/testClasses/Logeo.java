@@ -57,4 +57,9 @@ public class Logeo {
         PdfQaNovaReports.addReport("Archivo de Carga", "Archivo cargado correctamente", EstadoPrueba.PASSED,false);
 
     }
+
+    public void json() throws IOException {
+        LeerJson leerJson = new LeerJson();
+        leerJson.recuperarJson();
+    }
 }

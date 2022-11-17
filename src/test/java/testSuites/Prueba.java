@@ -38,4 +38,10 @@ public class Prueba {
         PdfQaNovaReports.closePDF();
         //Utils.enviarCorreo("idiaazv@gmail.com");
     }
+
+    @Test
+    public void pruebaJson() throws IOException {
+        Logeo logeo = new Logeo();
+        logeo.json();
+    }
 }
