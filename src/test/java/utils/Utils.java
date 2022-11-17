@@ -71,14 +71,27 @@ public class Utils {
         String ruta = ReadProperties.readFromConfig("Propiedades.properties").getProperty("directorioDescargas");
         String url = elementoDescarga.getAttribute("href");
         String nombreArchivo = url.substring(url.lastIndexOf("/") +1);
+        File file = new File(ruta + "//" +nombreArchivo);
+        if (file.exists()) {
+            System.out.println("Archivo '" +nombreArchivo + "' existe, se procede a borrarlo");
+            try {
+                file.delete();
+                System.out.println("Archivo '"+nombreArchivo+"' borrado");
+                PdfQaNovaReports.addReport("Borrado "+nombreArchivo, "El archivo '"+nombreArchivo+"' existe en la ruta: '"+ruta+"', por lo cual se procede a borrarlo.", EstadoPrueba.PASSED, false);
+            } catch (Exception e) {
+                System.out.println("Archivo '"+nombreArchivo+"' no pudo ser borrado");
+                PdfQaNovaReports.addReport("Borrado "+nombreArchivo, "El archivo '"+nombreArchivo+"' existe en la ruta: '"+ruta+"', pero no pudo ser borrado.", EstadoPrueba.FAILED, true);
+            }
+        }
         HttpURLConnection httpURLConnection = (HttpURLConnection) (new URL(url).openConnection());
         httpURLConnection.setRequestMethod("GET");
         try (InputStream inputStream = httpURLConnection.getInputStream()) {
             Files.copy(inputStream, new File(ruta + "//" + nombreArchivo).toPath(), StandardCopyOption.REPLACE_EXISTING);
             System.out.println("Descarga Realizada");
-            PdfQaNovaReports.addReport("Descarga Archivo" + nombreArchivo, "Se realiza correctamente la descaga de archivo '"+nombreArchivo+"', el cual se utiliza en: \n" +ruta, EstadoPrueba.PASSED, false);
+            PdfQaNovaReports.addReport("Descarga Archivo" + nombreArchivo, "Se realiza correctamente la descaga de archivo '"+nombreArchivo+"', el cual se ubica en: \n" +ruta, EstadoPrueba.PASSED, false);
         } catch (Exception e) {
             PdfQaNovaReports.addReport("Descarga Archivo" + nombreArchivo, "No se realiza la descaga de archivo '"+nombreArchivo+"'", EstadoPrueba.FAILED, true);
         }
     }
+
 }

@@ -44,7 +44,7 @@ public class Logeo {
         cargaInformacion.clickBtnEnviar();
         descargaArchivos.ingresarDescargarArchivos();
         //descargaArchivos.descargarPorBoton();
-        descargaArchivos.descargarPorLink();
-
+        //descargaArchivos.descargarPorLink();
+        descargaArchivos.descargarPorImagen();
     }
 }
